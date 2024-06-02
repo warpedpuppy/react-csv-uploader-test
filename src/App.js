@@ -1,23 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
 
+import './App.css';
+import Dropzone1 from './Dropzone1';
+import CSVReader from 'react-csv-reader'
+  
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+	  <Dropzone1 />
+	  <CSVReader onFileLoaded={(data, fileInfo, originalFile) => console.dir(data, fileInfo, originalFile)} />
     </div>
   );
 }
